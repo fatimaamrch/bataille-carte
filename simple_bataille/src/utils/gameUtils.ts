@@ -1,4 +1,4 @@
-import { Card } from '../types/deck';
+import { Card } from '../types/DeckTypes';
 
 export const shuffleDeck = (deck: Card[]): Card[] => {
   const shuffled = [...deck];
@@ -18,10 +18,10 @@ export const compareCards = (playerCard: Card, computerCard: Card): string => {
   const computerValue = cardValues[computerCard.value];
 
   if (playerValue > computerValue) {
-    return 'Player wins this round';
+    return 'Le joueur gagne ce tour';
   } else if (computerValue > playerValue) {
-    return 'Computer wins this round';
+    return 'L\'ordinateur gagne ce tour';
   } else {
-    return 'It\'s a tie!';
+    return 'C\'est une égalité! ';
   }
 };

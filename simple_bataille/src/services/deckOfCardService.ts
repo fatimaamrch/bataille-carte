@@ -1,6 +1,6 @@
 
 import axios from 'axios';
-import { Deck } from '../types/deck';
+import { Deck } from '../types/DeckTypes';
 
 
 const getDeck = async (): Promise<Deck> => {
