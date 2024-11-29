@@ -1,17 +1,13 @@
+// types/deck.ts
 export interface Card {
     code: string;
     image: string;
-    images: {
-      svg: string;
-      png: string;
-    };
     value: string;
     suit: string;
+    rank: number;  // Rang de la carte pour déterminer la force (ex: As = 14, Roi = 13, etc.)
   }
   
   export interface Deck {
-    deck_id: string;
-    remaining: number;
     cards: Card[];
   }
   

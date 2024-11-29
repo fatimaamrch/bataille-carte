@@ -1,13 +1,120 @@
+
 body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #035031, #034730); 
+  background-image: 
+  
+    radial-gradient(circle, rgba(255, 255, 255, 0.05) 15%, transparent 16%) 0 0,
+    radial-gradient(circle, rgba(255, 255, 255, 0.05) 15%, transparent 16%) 100px 100px;
+  background-size: 100px 100px, 100px 100px; /* Taille des motifs */
+  background-position: 0 0, 50px 50px;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  overflow: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.game-page {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2); 
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px); 
+  max-width: 800px;
+  width: 100%;
 }
+
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+
+button {
+  background-color: #05704d;
+  color: white;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  margin: 15px 0;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: #044732;
+  transform: scale(1.05);
+}
+
+.cards-display {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.card {
+  width: 150px;
+  height: 220px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background-color: white;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  background-color: #fff;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+
+.game-result {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ff6347;
+  margin-top: 20px;
+}
+
+.turns {
+  font-size: 1.1rem;
+  color: #e8e8e8;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
